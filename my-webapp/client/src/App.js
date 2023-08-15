@@ -5,7 +5,7 @@ import MyNewButton from './MyNewButton';
 import Profile from './Profile';
 import ShoppingList from './ShoppingList';
 
-import Board from './Board';
+import Game from './Game';
 
 import { useState } from 'react';
 
@@ -35,7 +35,7 @@ export default function App() {
         <Profile />
         <ShoppingList />
 
-        <Board />
+        <Game />
     </div>
   );
 }
