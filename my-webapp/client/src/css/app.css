@@ -106,3 +106,10 @@ code {
   border-radius: 50%;
 }
 
+.list_with_dot {
+  list-style: disc;
+}
+
+.list_with_dot li {
+  margin-left: 20px;
+}

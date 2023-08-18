@@ -5,10 +5,13 @@ import MyNewButton from './MyNewButton';
 import Profile from './Profile';
 import ShoppingList from './ShoppingList';
 import Game from './Game';
-
 import Gallery from './Gallery';
 
+import PackingList from './PackingList'
+
 import { useState } from 'react';
+
+
 
 
 export default function App() {
@@ -41,6 +44,8 @@ export default function App() {
         <p>
           <Gallery />
         </p>
+
+        <PackingList />
         
     </div>
   );
