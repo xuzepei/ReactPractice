@@ -1,0 +1,49 @@
+h2 {
+    text-align: center;
+}
+
+.slider {
+    min-width: 50%;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0; 
+}
+
+.left-arrow {
+    left: 5%;
+}
+
+.right-arrow {
+    right: 5%;
+}
+
+.left-arrow, .right-arrow {
+    position: absolute;
+    z-index: 1;
+    font-size: 20px;
+    top: 46%;
+    color: white;
+    background: black;
+    border-radius: 50%;
+    padding: 4px 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.image-box {
+    min-width: 100%;
+}
+
+.image-box, img {
+    max-width: 70%;
+    height: auto;
+}
+
+div {
+    text-align: center;
+}

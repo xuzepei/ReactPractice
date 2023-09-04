@@ -1,0 +1,9 @@
+.App {
+  font-family: sans-serif;
+  text-align: left;
+  color: black;
+}
+
+.list_with_dot {
+  list-style: disc;
+}

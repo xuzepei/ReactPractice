@@ -9,6 +9,18 @@ import Gallery from './Gallery';
 
 import PackingList from './PackingList'
 
+import ScientistList from './ScientistList';
+
+import RecipeList from './RecipeList';
+
+import TodoList from './TodoList';
+
+import Carousel from './Carousel';
+
+import UseHook from './UseHook';
+
+import QuoteGenerator from './QuoteGenerator';
+
 import { useState } from 'react';
 
 
@@ -24,7 +36,7 @@ export default function App() {
 
   return (
     <div className="App">
-        <h1>Counters that update separately</h1>
+      {/* <h1>Counters that update separately</h1>
         <ol>
           <li><MyButton /></li>
           <li><MyButton /></li>
@@ -46,7 +58,18 @@ export default function App() {
         </p>
 
         <PackingList />
-        
+
+        <ScientistList /> */}
+
+      {/* <RecipeList /> */}
+
+      {/* <TodoList /> */}
+
+      {/* <Carousel /> */}
+
+      <UseHook />
+
+      <QuoteGenerator />
     </div>
   );
 }
