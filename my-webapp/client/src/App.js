@@ -21,10 +21,9 @@ import UseHook from './UseHook';
 
 import QuoteGenerator from './QuoteGenerator';
 
+import GitHubUserSearch from './GitHubUserSearch';
+
 import { useState } from 'react';
-
-
-
 
 export default function App() {
 
@@ -67,9 +66,11 @@ export default function App() {
 
       {/* <Carousel /> */}
 
-      <UseHook />
+      {/* <UseHook /> */}
 
-      <QuoteGenerator />
+      {/* <QuoteGenerator /> */}
+
+      <GitHubUserSearch />
     </div>
   );
 }
