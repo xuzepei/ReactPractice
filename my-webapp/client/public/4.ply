@@ -1,0 +1,22 @@
+ply
+format ascii 1.0
+comment VCGLIB generated
+comment TextureFile smile.png
+element vertex 6
+property float x
+property float y
+property float z
+element face 4
+property list uchar int vertex_indices
+property list uchar float texcoord
+end_header
+-0.5 -0.5 -0.5 
+-0.5 0.5 -0.5 
+-0.5 -0.5 0.5 
+0.5 -0.5 0.5 
+-0.5 0.5 0.5 
+0.5 0.5 0.5 
+3 2 1 0 6 0.000977 0.502358 0.497642 0.999023 0.000977 0.999023 
+3 1 2 4 6 0.499023 0.997642 0.002358 0.500977 0.499023 0.500977 
+3 4 3 5 6 0.500977 0.502358 0.997642 0.999023 0.500977 0.999023 
+3 3 4 2 6 0.999023 0.997642 0.502358 0.500977 0.999023 0.500977 

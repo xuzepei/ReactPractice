@@ -18,7 +18,7 @@ function Form({ onSubmit, onChange, value }) {
 }
 
 
-export default function GitHubUserSearch() {
+function GitHubUserSearch2() {
 
     const [query, setQuery] = useState("");
     const [results, setResults] = useState([]);
@@ -101,4 +101,75 @@ export default function GitHubUserSearch() {
             </div>
         </div>
     );
+}
+
+export default function GitHubUserSearch() {
+
+    const [query, setQuery] = useState("");
+    const [results, setResults] = useState([]);
+
+    const baseUrl = "https://api.github.com";
+
+    async function getResults(query) {
+
+        const url = baseUrl + '/search/users?q=' + query;
+        try {
+            const response = await axios.get(url);
+            const jsonData = response.data;
+
+            // 在这里处理 jsonData，进行后续操作
+            console.log("response: " + JSON.stringify(jsonData.items))
+
+            if (Array.isArray(jsonData.items)) {
+                console.log("###############")
+                setResults(jsonData.items)
+            } else {
+                setResults([])
+            }
+
+        } catch (error) {
+            console.error(error);
+        }
+
+    }
+
+    function onSearchChange(event) {
+        setQuery(event.target.value);
+    }
+
+    async function onSearchSubmit(event) {
+        event.preventDefault()
+        console.log("onSearchSubmit: " + query)
+
+        await getResults(query)
+    }
+
+    function User() {
+        return (<span>
+            <div>Result:</div>
+        </span>);
+    }
+
+    return (<div><h1>GitHub User Search</h1>
+        <form>
+            <input placeholder='Enter username or email' onChange={onSearchChange} value={query}></input>
+            <button onClick={onSearchSubmit}>Submit</button>
+        </form>
+        <div>
+            <h3>Results:</h3>
+            <div>
+            {
+                results.map((user) => {
+                    return (
+                        <div key={user.login}>
+                        <img src={user.avatar_url} ></img>
+                        <div>{user.login}</div>
+                    </div>
+                    );
+                })
+            }
+            </div>
+            
+        </div>
+    </div>);
 }
